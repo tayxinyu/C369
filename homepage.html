@@ -10,16 +10,18 @@ Class: C369-2D-E63C-A
 Date/Time Last modified: 14 August 2023 14:00
 -->
 
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Homepage</title>
+  <title> Log In </title>
+  <link rel="icon" type="image/png" href="/png/bank.png">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.js"></script>
   <script>
     function myFun() {
       alert("DON'T share your personal details, OTP as these may lead to fraud");
@@ -526,11 +528,11 @@ Date/Time Last modified: 14 August 2023 14:00
         document.getElementById(bankTab).style.display = "block";
         evt.currentTarget.className += " active";
       }
-  
+
       window.onload = function () {
         alert("DON'T share your personal details, OTP as these may lead to fraud !");
-      }; 
-    
+      };
+
       document.getElementById("defaultOpen").click();
       function myFunction() {
         var url = "homepage.html";
