@@ -16,7 +16,7 @@ Date/Time Last modified: 14 August 2023 14:00
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Log In </title>
-  <link rel="icon" type="image/png" href="/png/bank.png">
+  <link rel="icon" type="image/png" href="png/bank.png">
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -83,7 +83,6 @@ Date/Time Last modified: 14 August 2023 14:00
       width: 30px;
       height: 30px;
       display: block;
-      border-radius: 30px;
     }
 
     /*End of tab*/
@@ -266,6 +265,62 @@ Date/Time Last modified: 14 August 2023 14:00
       height: 100px;
       width: 100px;
     }
+
+    .navbar {
+      width: 100%;
+      background-color: #ccc;
+      /* overflow: auto; */
+    }
+
+    .navbar a {
+      float: left;
+      padding: 12px;
+      color: black;
+      text-decoration: none;
+
+    }
+
+
+    .active {
+      background-color: #d3d3d3;
+    }
+
+    @media screen and (max-width: 500px) {
+      .navbar a {
+        float: none;
+        display: block;
+      }
+    }
+
+    .dropbtn {
+      padding: 20px;
+      border: none;
+      background-color: transparent;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
   </style>
 </head>
 
@@ -289,12 +344,37 @@ Date/Time Last modified: 14 August 2023 14:00
     <br />
 
     <br />
-
-    <div class="tab">
+    <div class="navbar">
+      <a class="active" href="/homepage.html"><img src="png/history.png" class="icon">History</a>
+      <div class="dropdown">
+        <img src="png/dollarsign.jpeg" class="icon">
+        <button class="dropbtn">Transfer</button>
+        <div class="dropdown-content">
+          <a href="local.html">Local Transfer</a>
+          <a href="overseas.html">Overseas Transfer</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <img src="png/card.png" class="icon">
+        <button class="dropbtn">Manage Card</button>
+        <div class="dropdown-content">
+          <a href="freeze.html">Freeze Card</a>
+          <a href="replace.html">Replace Card</a>
+          <a href="cardpin.html">Reset Card PIN</a>
+          <a href="setlimit.html">Set Limit</a>
+        </div>
+      </div>
+      <a href="/grow.html"><img src="png/growmoney.png" class="icon">Grow Money</a>
+      <a href="/insurance.html"><img src="png/umbrella.png" class="icon">Insurance</a>
+      <a href="/loan.html"><img src="png/loan.png" class="icon">Loan</a>
+    </div>
+  </div>
+  <!-- <div class="tab">
       <button class="tablinks" onclick="openTab(event, 'History')" id="defaultOpen"><img src="png/history.png"
           class="icon">History</button>
       <button class="tablinks" onclick="openTab(event, 'Transfer')"><img src="png/dollarsign.jpeg"
           class="icon">Transfer</button>
+
       <button class="tablinks" onclick="openTab(event, 'Manage card')"><img src="png/card.png" class="icon">Manage
         card</button>
       <button class="tablinks" onclick="openTab(event, 'Grow Money')"><img src="png/growmoney.png" class="icon">Grow
@@ -302,262 +382,107 @@ Date/Time Last modified: 14 August 2023 14:00
       <button class="tablinks" onclick="openTab(event, 'Insurance')"><img src="png/umbrella.png"
           class="icon">Insurance</button>
       <button class="tablinks" onclick="openTab(event, 'Loan')"><img src="png/loan.png" class="icon">Loan</button>
-    </div>
-    <!--tab for History-->
-    <div id="History" class="tabcontent">
-      <br>
-      <br>
-      <div class="content">
-        <p style="font-size:30px; padding: 15px; ">Balance
-          <span style="margin-left: 700px;">
-            $100.00
-          </span>
-        </p>
-
-      </div>
-      <br>
-
-      <p style="font-size: 30px; margin-left: 15px;">Transactions</p>
-      <br />
-
-      <div class="content2">
-        <p style="font-size: 20px; padding: 10px;">Transfer to Alice
-          <span style="color: red; margin-left: 850px; display: block; margin-top: -30px;">
-            -$15.00
-          </span>
-        </p>
-
-      </div>
-    </div>
-
-    <!--tab for Transfer-->
-    <div id="Transfer" class="tabcontent">
-      <div class="transfer-position-button">
-        <a href="local.html" target="_self">
-          <button class="rounded-button">Local Transfer</button>
-        </a>
-      </div>
-
-      <div class="transfer-position-button">
-        <a href="overseas.html" target="_self">
-          <button class="rounded-button">Overseas Transfer</button>
-        </a>
-      </div>
-    </div>
+    </div> -->
 
 
-    <!--tab for Manage Card-->
-    <div id="Manage card" class="tabcontent">
-      <br>
-      <br>
-      <div class=content3>
-        <p style="font-size: 20px; margin-left: 300px ; padding:10px 0;"> XY Bank </p>
-        <img src="png/chip.jpg" style="width:50px;height:50px; margin-left: 15px">
-        <p style="margin-left: 15px"> 3123 4567 8912 3456 </p>
-        <p style="margin-left: 15px"> Lia Liu </p>
-        <p style="margin: -30px 0px 0px 200px; display: block; width: 50px;"> VALID THRU</p>
-        <p style="margin: -20px 0px 0px 250px;"> 11/25</p>
-        <img src="png/mastercard.png" style="width:100px;height:100px; margin: -60px 0px 0px 300px">
-      </div>
+  <!--tab for History-->
 
-      <div class="manage-card-position-button">
-        <a href="freeze.html" target="_self">
-          <button class="rounded-button">Freeze Card</button>
-        </a>
-      </div>
-
-      <div class="manage-card-position-button">
-        <a href="replace.html" target="_self">
-          <button class="rounded-button">Replace Card</button>
-        </a>
-      </div>
-
-      <div class="manage-card-position-button">
-        <a href="cardpin.html" target="_self">
-          <button class="rounded-button">Reset Card PIN </button>
-        </a>
-      </div>
-
-      <div class="manage-card-position-button">
-        <a href="setlimit.html" target="_self">
-          <button class="rounded-button">Set Limit</button>
-        </a>
-      </div>
-
-
+    <div class="content">
+      <p style="font-size:30px; padding: 15px; ">Balance
+        <span style="margin-left: 700px;">
+          $100.00
+        </span>
+      </p>
 
     </div>
+    <br>
 
-    <!--tab for Grow Money-->
-    <div id="Grow Money" class="tabcontent">
-      <div>
-        <p style=" font-size: x-large; display: inline-block; padding-top: 20px;"> Interest Rate: 2.1% </p>
-        <p style="font-size: x-large; display: inline-block; margin-left: 500px;"> Interest Earned: $360.95</p>
-      </div>
-      <br />
+    <p style="font-size: 30px; margin-left: 15px;">Transactions</p>
+    <br />
 
-      <div class="display-row">
-        <p class="display-word" for="mobile"> Input amount to grow :
-          <input class="display-box" type="text" id="mobile" name="mobile">
-        </p>
-      </div>
-
-      <div class="grow-money-position-button">
-        <button onclick="myFunctionGrowMoney()" class="grow-money-rounded-button">Grow Money</button>
-        <button style="margin-left: 560px;" onclick="myFunctionRedeem()" class="grow-money-rounded-button"> Redeem
-        </button>
-      </div>
-
-      <div>
-        <h1> Investment </h1>
-        <p style="font-size:large;"> Invest Using
-          <input href style=" margin-left: 660px; width: 205px;" type="text" placeholder="123-456789-0" />
-        </p>
-
-        <p style="font-size:large;"> Risk Profile
-          <select style="width: 205px; height: 30px; margin-left:670px;">
-            <option value="" slected></option>
-            <option value="Low">Low</option>
-            <option value="Medium">Medium</option>
-            <option value="High">High</option>
-            <option value="Very High">Very High</option>
-
-          </select>
-        </p>
-      </div>
-    </div>
-
-    <!--tab for Insurance-->
-    <div id="Insurance" class="tabcontent">
-      <br />
-      <br />
-      <div>
-        <p> Health Insurance </p>
-        <img src="png/health.jpg" class="insurance">
-        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-        </p>
-      </div>
-
-      <div class="insurance-box2">
-        <p> Disability Insurance</p>
-        <img src="png/disability.jpg" class="insurance">
-        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply
-            Now </button>
-        </p>
-      </div>
-
-      <div class="insurance-box3">
-        <p> Accident Insurance </p>
-        <img src="png/accident.jpg" class="insurance">
-        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-        </p>
-      </div>
-
-      <div class="insurance-box4">
-        <p> Long-Term Care Insurance</p>
-        <img src="png/long-term.jpg" class="insurance">
-        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-        </p>
-      </div>
-
-
-      <br />
-      <br />
-      <br />
-
-      <div>
-        <p>Dental Insurance</p>
-        <img src="png/dental.jpg" class="insurance">
-        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-        </p>
-      </div>
-
-      <div class="insurance-box6">
-        <p>Income Insurance</p>
-        <img src="png/income.jpg" class="insurance">
-        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-        </p>
-      </div>
-
-      <div class="insurance-box7">
-        <p>Cancer Insurance</p>
-        <img src="png/cancer.jpg" class="insurance">
-        <p class="insurance-button"> <button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-        </p>
-      </div>
-
-      <div class="insurance-box8">
-        <p>Accident Death Insurance</p>
-        <img src="png/death.jpg" class="insurance">
-        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-        </p>
-      </div>
+    <div class="content2">
+      <p style="font-size: 20px; padding: 10px;">Transfer to Alice
+        <span style="color: red; margin-left: 850px; display: block; margin-top: -30px;">
+          -$15.00
+        </span>
+      </p>
 
     </div>
-
-    <!--tab for Loan-->
-    <div id="Loan" class="tabcontent">
-      <br>
-      <div class=content3>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <span style="margin-left:35px;">Balance</span>
-        <span style="margin-left:35px;"> Interest Rate</span>
-        <span style="margin-left:35px;">Monthly Repayment</span>
-      </div>
-      <button class="loan-box" onclick="myFunctionLoan()">Apply Now </button>
+  </div>
+  <!--tab for Transfer-->
+  <div id="Transfer" class="tabcontent">
+    <div class="transfer-position-button">
+      <a href="local.html" target="_self">
+        <button class="rounded-button">Local Transfer</button>
+      </a>
     </div>
 
-    <script>
-      function openTab(evt, bankTab) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(bankTab).style.display = "block";
-        evt.currentTarget.className += " active";
+    <div class="transfer-position-button">
+      <a href="overseas.html" target="_self">
+        <button class="rounded-button">Overseas Transfer</button>
+      </a>
+    </div>
+  </div>
+
+
+  <!--tab for Manage Card-->
+  <div id="Manage card" class="tabcontent">
+    <br>
+    <br>
+    <div class=content3>
+      <p style="font-size: 20px; margin-left: 300px ; padding:10px 0;"> XY Bank </p>
+      <img src="png/chip.jpg" style="width:50px;height:50px; margin-left: 15px">
+      <p style="margin-left: 15px"> 3123 4567 8912 3456 </p>
+      <p style="margin-left: 15px"> Lia Liu </p>
+      <p style="margin: -30px 0px 0px 200px; display: block; width: 50px;"> VALID THRU</p>
+      <p style="margin: -20px 0px 0px 250px;"> 11/25</p>
+      <img src="png/mastercard.png" style="width:100px;height:100px; margin: -60px 0px 0px 300px">
+    </div>
+
+  <script>
+    function openTab(evt, bankTab) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
       }
-
-      window.onload = function () {
-        alert("DON'T share your personal details, OTP as these may lead to fraud !");
-      };
-
-      document.getElementById("defaultOpen").click();
-      function myFunction() {
-        var url = "homepage.html";
-        window.location.href = url;
-        alert("Card PIN Changed!\nYour card PIN has been changed successfully!");
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
+      document.getElementById(bankTab).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
 
-      function myFunction() {
-        var url = "homepage.html";
-        window.location.href = url;
-        alert("Insurance applied successfully!");
-      }
+    window.onload = function () {
+      alert("DON'T share your personal details, OTP as these may lead to fraud !");
+    };
 
-      function myFunctionGrowMoney() {
-        alert("Money is growing!");
-      }
+    document.getElementById("defaultOpen").click();
+    function myFunction() {
+      var url = "homepage.html";
+      window.location.href = url;
+      alert("Card PIN Changed!\nYour card PIN has been changed successfully!");
+    }
 
-      function myFunctionRedeem() {
-        alert("Grown money has been redeemed!");
-      }
+    function myFunction() {
+      var url = "homepage.html";
+      window.location.href = url;
+      alert("Insurance applied successfully!");
+    }
 
-      function myFunctionLoan() {
-        alert("Loan has been made!");
-      }
-    </script>
+    function myFunctionGrowMoney() {
+      alert("Money is growing!");
+    }
+
+    function myFunctionRedeem() {
+      alert("Grown money has been redeemed!");
+    }
+
+    function myFunctionLoan() {
+      alert("Loan has been made!");
+    }
+  </script>
   </div>
 </body>
 
