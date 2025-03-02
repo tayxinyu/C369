@@ -1,0 +1,91 @@
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Some codes were done with references of w3school.com'
+
+Student Name: Tay Xin Yu
+Student ID:22012885
+Class: C369-2D-E63C-A
+Date/Time Last modified: 14 August 2023 14:00
+-->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Log In </title>
+  <link rel="icon" type="image/png" href="/png/bank.png">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <script src="/bootstrap/js/bootstrap.js"></script>
+  <style>
+    body {
+      background-image: url(png/gbtb.jpg);
+      background-size: 2000px 1000px;
+    }
+
+    .content {
+      border-radius: 10px;
+      max-width: 400px;
+      height: 650px;
+      margin: auto;
+      background: white;
+    }
+
+
+
+    div {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class=content>
+    <br />
+
+    <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
+    <!--<p><input class="ga/textbox.css" type="text" placeholder="User ID" required /></p>
+    <p><input class="ga/textbox.css" type="text" placeholder="Password" required /></p>
+    <a href="homepage.html" target="_self">Log in</a>
+    -->
+
+    <form>
+      <p>
+        <input class="ga/textbox.css" type="text" placeholder="User ID" required />
+      </p>
+      <p>
+        <input class="ga/textbox.css" type="text" placeholder="Password" required />
+      </p>
+
+      <button type="submit" onclick="window.location.href='homepage.html'"> Log In</button>
+
+    </form>
+
+
+    <!--<p> or </p>
+    <button onclick="window.location.href='https://login.singpass.gov.sg/spservice/welcome'"> Login with Singpass
+    </button>-->
+    <p>Or</p>
+    <img src="png/singpass.png" style="
+      border-radius: 10px; width: 300px; height: 300px;">
+
+    <p> Don't have an account yet? Sign up
+      <a href="signup.html" target="_blank">here</a>
+    </p>
+
+    <p> Forgot
+      <a href="userid.html" target="_blank">User ID</a>
+      or
+      <a href="password.html" target="_blank">Password </a>
+    </p>
+
+  </div>
+
+
+
+</body>
+
+</html>

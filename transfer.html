@@ -1,0 +1,168 @@
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Some codes were done with references of w3school.com
+
+Student Name: Tay Xin Yu
+Student ID:22012885
+Class: C369-2D-E63C-A
+Date/Time Last modified: 14 August 2023 14:00
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Local Transfer </title>
+  <style>
+    body {
+      background-color: rgb(216, 207, 196);
+    }
+
+    /*start of tab*/
+    .tab {
+      overflow: hidden;
+      border: 0px;
+      background-color: #f1f1f1;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 10px;
+      transition: 0.3s;
+      font-size: 17px;
+      margin: 0px 0px 0px 65px;
+    }
+
+
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      display: block;
+      border-radius: 30px;
+    }
+
+    /*End of tab*/
+
+    .maincontent {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .content {
+      border-radius: 5px;
+      width: 200px;
+      height: 30px;
+      background: white;
+      margin-left: auto;
+    }
+
+    .rounded-button {
+      min-width: 800px;
+      min-height: 80px;
+      border-radius: 20px;
+      border: -20px solid;
+      color: black;
+    }
+
+    /*start for ALL type, mobile number, NRIC*/
+    .display-row {
+      display: flex;
+      padding-top: 30px;
+    }
+
+    .display-word {
+      font-size: large;
+
+    }
+
+    .display-box {
+      height: 30px;
+      width: 195px;
+      margin-left: auto;
+      margin-top: -10px;
+      border-radius: 5px;
+      border-color: #f1f1f1;
+    }
+
+    /*end of tab*/
+  </style>
+</head>
+
+<body>
+  <div class="maincontent">
+
+    <div>
+      <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
+    </div>
+
+    <br />
+
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Transfer')"><img src="png/dollarsign.jpeg"
+          class="icon">Transfer</button>
+    </div>
+
+    <div class="display-row">
+      <span style="font-size: large;"> Type </span>
+      <div class="content">
+        <span style="padding: 10px; font-size: large;">Mobile</span>
+      </div>
+    </div>
+
+    <div class="display-row">
+      <span style="font-size: large;"> Recipient's Mobile Number </span>
+      <div class="content">
+        <span style="font-size: large; padding: 10px;"> 8123 4567 </span>
+      </div>
+    </div>
+
+    <div class="display-row">
+      <span style="font-size: large;"> Recipient's Name </span>
+      <div class="content">
+        <span style="font-size: large; padding: 10px;">Kaleb </span>
+      </div>
+    </div>
+
+    <div class="display-row">
+      <span style="font-size: large;"> Transfer Amount S$ </span>
+      <div class="content">
+        <span style="font-size: large; padding: 10px;"> 50.00 </span>
+      </div>
+    </div>
+
+    <div class="display-row">
+      <span style="font-size: large;"> From </span>
+      <div class="content">
+        <span style="font-size: large; padding: 10px;"> Lia Liu 123-456789-0 </span>
+      </div>
+    </div>
+
+    <div style="display: flex; padding-left: 800px; padding-bottom: 50px;" class="display-row">
+      <button style="height: 50px; width: 200px; font-size: large; border-radius: 5px;"
+        onclick="myFunction()">Transfer</button>
+
+    </div>
+    <script>
+      function myFunction() {
+        var url = "homepage.html";
+        window.location.href = url;
+        alert("Transfer Successful!");
+      }
+    </script>
+  </div>
+</body>
+
+</html>

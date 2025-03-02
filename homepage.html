@@ -1,0 +1,562 @@
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Some codes were done with references of w3school.com
+
+Student Name: Tay Xin Yu
+Student ID:22012885
+Class: C369-2D-E63C-A
+Date/Time Last modified: 14 August 2023 14:00
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Homepage</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    function myFun() {
+      alert("DON'T share your personal details, OTP as these may lead to fraud");
+    }
+  </script>
+  <style>
+    body {
+      margin: 0px 50px 0px 50px;
+      background-color: rgb(216, 207, 196);
+      max-width: 100%;
+
+    }
+
+    .login-button {
+      background-color: whitesmoke;
+      color: black;
+      border: none;
+      height: 30px;
+      width: 80px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /*start of tab*/
+    .tab {
+      overflow: hidden;
+      border: 0px;
+      background-color: #f1f1f1;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 10px;
+      transition: 0.3s;
+      font-size: 17px;
+      margin: 0px 0px 0px 65px;
+    }
+
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      display: block;
+      border-radius: 30px;
+    }
+
+    /*End of tab*/
+
+    /*logout*/
+    .logout-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      margin-right: 280px;
+    }
+
+    .logout-icon {
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    .logout-text {
+      order: -1;
+      font-size: medium;
+      text-decoration: underline;
+      bottom: 1px solid rgb(65, 65, 91);
+    }
+
+    /*End of logout*/
+
+
+    /*profile*/
+    .profile-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      margin-right: 400px;
+    }
+
+    .profile-icon {
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    .profile-text {
+      order: -1;
+      font-size: medium;
+      text-decoration: underline;
+      bottom: 1px solid rgb(65, 65, 91);
+    }
+
+    /*end of profile*/
+
+    .maincontent {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .content {
+      border-radius: 10px;
+      height: 80px;
+      background: white;
+
+    }
+
+    .content2 {
+      border-radius: 10px;
+      height: 45px;
+      background: white;
+    }
+
+    .content3 {
+      border-radius: 10px;
+      max-width: 400px;
+      height: 200px;
+      background: white;
+    }
+
+    /* Button for all rounded*/
+    .rounded-button {
+      min-width: 500px;
+      min-height: 50px;
+      border-radius: 20px;
+      border: -20px solid;
+      color: black;
+    }
+
+    /* Button for transfer tab */
+    .transfer-position-button {
+      display: flex;
+      padding-left: 250px;
+      padding-top: 100px;
+    }
+
+    /* Button for manage card tab */
+    .manage-card-position-button {
+      display: flex;
+      padding-left: 450px;
+      margin-top: -210px;
+      margin-bottom: 220px;
+
+    }
+
+    /* Button for grow money tab */
+    .grow-money-position-button {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .grow-money-rounded-button {
+      width: 200px;
+      height: 50px;
+      border-radius: 20px;
+      border: -20px solid;
+      color: black;
+      display: inline-block;
+    }
+
+    /*end of Button for all rounded*/
+
+
+    /* margin insurance*/
+
+    .insurance-button {
+      margin-left: 40px;
+      margin-top: 20px;
+    }
+
+    .insurance-box2 {
+      margin-top: -185px;
+      margin-left: 275px;
+    }
+
+    .insurance-box3 {
+      margin-top: -185px;
+      margin-left: 550px;
+    }
+
+    .insurance-box4 {
+      margin-top: -185px;
+      margin-left: 800px;
+    }
+
+    .insurance-box6 {
+      margin-top: -185px;
+      margin-left: 275px;
+    }
+
+    .insurance-box7 {
+      margin-top: -185px;
+      margin-left: 550px;
+    }
+
+    .insurance-box8 {
+      margin-top: -185px;
+      margin-left: 800px;
+    }
+
+    .insurance-button-radius {
+      border-radius: 5px;
+    }
+
+    /*end of margin insurance*/
+
+    /* margin loan*/
+    .loan-box {
+      margin-left: 310px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    /*end of loan*/
+
+    /* insurance tab pic*/
+    .insurance {
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="maincontent">
+    <br />
+    <div class="logout-container"></div>
+    <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
+    <div class="logout-container">
+      <a href="logout.html" target="_self"><img src="png/logout.png" class="logout-icon"></a>
+      <div class="logout-text">
+        <a href="logout.html" target="_self">Log out</a>
+      </div>
+    </div>
+    <div class="profile-container">
+      <a href="profile.html" target="_self"><img src="png/human.jpg" class="profile-icon"></a>
+      <div class="profile-text">
+        <a href="profile.html" target="_self">Profile</a>
+      </div>
+    </div>
+    <br />
+
+    <br />
+
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'History')" id="defaultOpen"><img src="png/history.png"
+          class="icon">History</button>
+      <button class="tablinks" onclick="openTab(event, 'Transfer')"><img src="png/dollarsign.jpeg"
+          class="icon">Transfer</button>
+      <button class="tablinks" onclick="openTab(event, 'Manage card')"><img src="png/card.png" class="icon">Manage
+        card</button>
+      <button class="tablinks" onclick="openTab(event, 'Grow Money')"><img src="png/growmoney.png" class="icon">Grow
+        Money</button>
+      <button class="tablinks" onclick="openTab(event, 'Insurance')"><img src="png/umbrella.png"
+          class="icon">Insurance</button>
+      <button class="tablinks" onclick="openTab(event, 'Loan')"><img src="png/loan.png" class="icon">Loan</button>
+    </div>
+    <!--tab for History-->
+    <div id="History" class="tabcontent">
+      <br>
+      <br>
+      <div class="content">
+        <p style="font-size:30px; padding: 15px; ">Balance
+          <span style="margin-left: 700px;">
+            $100.00
+          </span>
+        </p>
+
+      </div>
+      <br>
+
+      <p style="font-size: 30px; margin-left: 15px;">Transactions</p>
+      <br />
+
+      <div class="content2">
+        <p style="font-size: 20px; padding: 10px;">Transfer to Alice
+          <span style="color: red; margin-left: 850px; display: block; margin-top: -30px;">
+            -$15.00
+          </span>
+        </p>
+
+      </div>
+    </div>
+
+    <!--tab for Transfer-->
+    <div id="Transfer" class="tabcontent">
+      <div class="transfer-position-button">
+        <a href="local.html" target="_self">
+          <button class="rounded-button">Local Transfer</button>
+        </a>
+      </div>
+
+      <div class="transfer-position-button">
+        <a href="overseas.html" target="_self">
+          <button class="rounded-button">Overseas Transfer</button>
+        </a>
+      </div>
+    </div>
+
+
+    <!--tab for Manage Card-->
+    <div id="Manage card" class="tabcontent">
+      <br>
+      <br>
+      <div class=content3>
+        <p style="font-size: 20px; margin-left: 300px ; padding:10px 0;"> XY Bank </p>
+        <img src="png/chip.jpg" style="width:50px;height:50px; margin-left: 15px">
+        <p style="margin-left: 15px"> 3123 4567 8912 3456 </p>
+        <p style="margin-left: 15px"> Lia Liu </p>
+        <p style="margin: -30px 0px 0px 200px; display: block; width: 50px;"> VALID THRU</p>
+        <p style="margin: -20px 0px 0px 250px;"> 11/25</p>
+        <img src="png/mastercard.png" style="width:100px;height:100px; margin: -60px 0px 0px 300px">
+      </div>
+
+      <div class="manage-card-position-button">
+        <a href="freeze.html" target="_self">
+          <button class="rounded-button">Freeze Card</button>
+        </a>
+      </div>
+
+      <div class="manage-card-position-button">
+        <a href="replace.html" target="_self">
+          <button class="rounded-button">Replace Card</button>
+        </a>
+      </div>
+
+      <div class="manage-card-position-button">
+        <a href="cardpin.html" target="_self">
+          <button class="rounded-button">Reset Card PIN </button>
+        </a>
+      </div>
+
+      <div class="manage-card-position-button">
+        <a href="setlimit.html" target="_self">
+          <button class="rounded-button">Set Limit</button>
+        </a>
+      </div>
+
+
+
+    </div>
+
+    <!--tab for Grow Money-->
+    <div id="Grow Money" class="tabcontent">
+      <div>
+        <p style=" font-size: x-large; display: inline-block; padding-top: 20px;"> Interest Rate: 2.1% </p>
+        <p style="font-size: x-large; display: inline-block; margin-left: 500px;"> Interest Earned: $360.95</p>
+      </div>
+      <br />
+
+      <div class="display-row">
+        <p class="display-word" for="mobile"> Input amount to grow :
+          <input class="display-box" type="text" id="mobile" name="mobile">
+        </p>
+      </div>
+
+      <div class="grow-money-position-button">
+        <button onclick="myFunctionGrowMoney()" class="grow-money-rounded-button">Grow Money</button>
+        <button style="margin-left: 560px;" onclick="myFunctionRedeem()" class="grow-money-rounded-button"> Redeem
+        </button>
+      </div>
+
+      <div>
+        <h1> Investment </h1>
+        <p style="font-size:large;"> Invest Using
+          <input href style=" margin-left: 660px; width: 205px;" type="text" placeholder="123-456789-0" />
+        </p>
+
+        <p style="font-size:large;"> Risk Profile
+          <select style="width: 205px; height: 30px; margin-left:670px;">
+            <option value="" slected></option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Very High">Very High</option>
+
+          </select>
+        </p>
+      </div>
+    </div>
+
+    <!--tab for Insurance-->
+    <div id="Insurance" class="tabcontent">
+      <br />
+      <br />
+      <div>
+        <p> Health Insurance </p>
+        <img src="png/health.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+      <div class="insurance-box2">
+        <p> Disability Insurance</p>
+        <img src="png/disability.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply
+            Now </button>
+        </p>
+      </div>
+
+      <div class="insurance-box3">
+        <p> Accident Insurance </p>
+        <img src="png/accident.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+      <div class="insurance-box4">
+        <p> Long-Term Care Insurance</p>
+        <img src="png/long-term.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+
+      <br />
+      <br />
+      <br />
+
+      <div>
+        <p>Dental Insurance</p>
+        <img src="png/dental.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+      <div class="insurance-box6">
+        <p>Income Insurance</p>
+        <img src="png/income.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+      <div class="insurance-box7">
+        <p>Cancer Insurance</p>
+        <img src="png/cancer.jpg" class="insurance">
+        <p class="insurance-button"> <button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+      <div class="insurance-box8">
+        <p>Accident Death Insurance</p>
+        <img src="png/death.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+    </div>
+
+    <!--tab for Loan-->
+    <div id="Loan" class="tabcontent">
+      <br>
+      <div class=content3>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <span style="margin-left:35px;">Balance</span>
+        <span style="margin-left:35px;"> Interest Rate</span>
+        <span style="margin-left:35px;">Monthly Repayment</span>
+      </div>
+      <button class="loan-box" onclick="myFunctionLoan()">Apply Now </button>
+    </div>
+
+    <script>
+      function openTab(evt, bankTab) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(bankTab).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+  
+      window.onload = function () {
+        alert("DON'T share your personal details, OTP as these may lead to fraud !");
+      }; 
+    
+      document.getElementById("defaultOpen").click();
+      function myFunction() {
+        var url = "homepage.html";
+        window.location.href = url;
+        alert("Card PIN Changed!\nYour card PIN has been changed successfully!");
+      }
+
+      function myFunction() {
+        var url = "homepage.html";
+        window.location.href = url;
+        alert("Insurance applied successfully!");
+      }
+
+      function myFunctionGrowMoney() {
+        alert("Money is growing!");
+      }
+
+      function myFunctionRedeem() {
+        alert("Grown money has been redeemed!");
+      }
+
+      function myFunctionLoan() {
+        alert("Loan has been made!");
+      }
+    </script>
+  </div>
+</body>
+
+</html>

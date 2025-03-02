@@ -1,0 +1,62 @@
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Student Name: Tay Xin Yu
+Student ID:22012885
+Class: C369-2D-E63C-A
+Date/Time Last modified: 
+-->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Freeze Card </title>
+  <link rel="icon" type="image/png" href="/png/bank.png">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <script src="/bootstrap/js/bootstrap.js"></script>
+  <style>
+    body {
+      background-color: rgb(216, 207, 196);
+    }
+
+    .content {
+      border-radius: 10px;
+      max-width: 400px;
+      max-height: 5000px;
+      margin: auto;
+      background: white
+    }
+
+    div {
+      text-align: center;
+    }
+
+    .button {
+      background-color: white;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 10px;
+      border: solid #D3D3D3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class=content>
+    <img src="png/bank.png" style="width:50px; height: 50px"> XY Bank
+    <p> </p>
+    <img src="png/freeze.png" style="width:150px;height:150px"></p>
+    <p> Are you sure you want freeze your card? </p>
+    <button class="button" onclick="myFunction()">Yes</button>
+    <button class="button" onclick="window.location.href='homepage.html';"> No
+  </div>
+  <script>
+    function myFunction() {
+      var url = "homepage.html";
+      window.location.href = url;
+      alert("Card has been freezed!");
+    }
+  </script>
+</body>

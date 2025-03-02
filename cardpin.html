@@ -1,0 +1,145 @@
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Student Name: Tay Xin Yu
+Student ID:22012885
+Class: C369-2D-E63C-A
+Date/Time Last modified: 
+-->
+
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Reset Card Pin </title>
+  <link rel="icon" type="image/png" href="/png/bank.png">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <script src="/bootstrap/js/bootstrap.js"></script>
+  <style>
+    body {
+      margin: 0px 50px 0px 50px;
+      background-color: rgb(216, 207, 196);
+      max-width: 100%;
+
+    }
+
+    .maincontent {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .tab {
+      overflow: hidden;
+      border: 0px;
+      background-color: #f1f1f1;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 10px;
+      transition: 0.3s;
+      font-size: 17px;
+      margin: 0px 0px 0px 65px;
+    }
+
+
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+
+    /*start for ALL type, mobile number, NRIC*/
+    .display-row {
+      display: flex;
+      padding-top: 30px;
+    }
+
+    .display-word {
+      font-size: large;
+
+    }
+
+    .display-box {
+      height: 30px;
+      width: 343px;
+      margin-left: auto;
+      margin-top: -10px;
+      border-radius: 5px;
+      border-color: #f1f1f1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="maincontent">
+
+    <div>
+      <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
+    </div>
+    <br />
+
+
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Manage card')"> <img src="png/card.png" class="icon">Manage
+        card</button>
+    </div>
+
+    <br />
+
+    <div class="display-row">
+      <label class="display-word" for="nric"> Recipient's NRIC / FIN: </label>
+      <input class="display-box" type="text" id="nric" name="nric">
+    </div>
+
+    <div class="display-row">
+
+      <label class="display-word" for="card"> Select Card</label>
+      <select class="display-box" style="width: 350px;">
+        <option value="" selected></option>
+        <option value="card">XY Bank MasterCard Debit Card 3123 4567 8912 3456</option>
+      </select>
+    </div>
+
+
+    <div class="display-row">
+      <label class="display-word" for="nric"> New Pin </label>
+      <input class="display-box" type="text" id="pin" name="pin">
+    </div>
+
+    <div class="display-row">
+      <label class="display-word" for="nric"> Confirm Pin </label>
+      <input class="display-box" type="text" id="pin" name="pin">
+    </div>
+
+
+    <div style="display: flex; padding-left: 800px; padding-bottom: 50px;" class="display-row">
+      <button style="height: 50px; width: 200px; font-size: large; border-radius: 5px;"
+        onclick="myFunction()">Change</button>
+
+      <script>
+        function myFunction() {
+          var url = "homepage.html";
+          window.location.href = url;
+          alert("Card PIN Changed!\n Your card PIN has been changed successfully!");
+        }
+      </script>
+    </div>
+
+</body>
+
+</html>

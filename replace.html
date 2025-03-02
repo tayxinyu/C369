@@ -1,0 +1,148 @@
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Some codes were done with references of w3school.com
+
+Student Name: Tay Xin Yu
+Student ID:22012885
+Class: C369-2D-E63C-A
+Date/Time Last modified: 14 August 2023 14:00
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Replace Card </title>
+  <style>
+    body {
+      margin: 0px 50px 0px 50px;
+      background-color: rgb(216, 207, 196);
+      max-width: 100%;
+    }
+
+    .maincontent {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .content {
+      border-radius: 5px;
+      width: 300px;
+      height: 40px;
+      background: white;
+      margin-left: auto;
+    }
+
+    .tab {
+      overflow: hidden;
+      border: 0px;
+      background-color: #f1f1f1;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 10px;
+      transition: 0.3s;
+      font-size: 17px;
+      margin: 0px 0px 0px 65px;
+    }
+
+
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+
+
+    /*start for ALL existing card, card type, name on new card, mailing address*/
+    .display-row {
+      display: flex;
+      padding-top: 30px;
+    }
+
+    .display-word {
+      font-size: large;
+
+    }
+
+    .display-box {
+      height: 30px;
+      width: 225px;
+      margin-left: auto;
+      margin-top: 10px;
+      border-radius: 5px;
+      border-color: #f1f1f1;
+    }
+  </style>
+
+<body>
+  <div class="maincontent">
+    <div>
+      <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
+    </div>
+
+    <br />
+
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Manage card')"> <img src="png/card.png" class="icon">Manage
+        card</button>
+    </div>
+
+    <br />
+
+    <div class="display-row">
+      <span style="font-size: large;"> Existing Card </span>
+      <div class="content">
+        <span style="padding: 10px; font-size: large;">3123 4567 8912 3456 </span>
+      </div>
+    </div>
+
+    <div class="display-row">
+      <span style="font-size: large;"> Card Type </span>
+      <div class="content">
+        <span style="padding: 10px; font-size: large;">XY Bank DEBIT CARD </span>
+      </div>
+    </div>
+
+    <div class="display-row">
+      <span style="font-size: large;"> Name on New card </span>
+      <div class="content">
+        <span style="padding: 10px; font-size: large;">Lia Liu </span>
+      </div>
+    </div>
+
+    <div class="display-row">
+      <span style="font-size: large;"> Your Mailing Address </span>
+      <div class="content">
+        <span style="padding: 10px; font-size: large;">9 Woodlands Ave 9, Singapore 738964 </span>
+      </div>
+    </div>
+
+    <div style="display: flex; padding-left: 800px; padding-bottom: 50px;" class="display-row">
+      <button style="height: 50px; width: 200px; font-size: large; border-radius: 5px;"
+        onclick="myFunction()">Confirm</button>
+    </div>
+    <script>
+      function myFunction() {
+        var url = "homepage.html";
+        window.location.href = url;
+        alert("A new card will be send to you!");
+      }
+    </script>
+  </div>
+</body>
+
+</html>

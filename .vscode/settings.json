@@ -1,0 +1,6 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5,
+  "liveServer.settings.wait": 5,
+  "liveServer.settings.port": 5501
+}

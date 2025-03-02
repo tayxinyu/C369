@@ -1,0 +1,145 @@
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Some codes were done with references of w3school.com
+
+Student Name: Tay Xin Yu
+Student ID:22012885
+Class: C369-2D-E63C-A
+Date/Time Last modified: 14 August 2023 14:00
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Set Card Limit </title>
+  <style>
+    body {
+      margin: 0px 50px 0px 50px;
+      background-color: rgb(216, 207, 196);
+      max-width: 100%;
+    }
+
+    .maincontent {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .content {
+      border-radius: 5px;
+      width: 450px;
+      height: 30px;
+      background: white;
+      margin-left: auto;
+    }
+
+    .tab {
+      overflow: hidden;
+      border: 0px;
+      background-color: #f1f1f1;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 10px;
+      transition: 0.3s;
+      font-size: 17px;
+      margin: 0px 0px 0px 65px;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+
+    /*start for ALL card, card limit*/
+    .display-row {
+      display: flex;
+      padding-top: 30px;
+    }
+
+    .display-word {
+      font-size: large;
+
+    }
+
+    .display-box {
+      height: 30px;
+      min-width: 450px;
+      margin-left: auto;
+      margin-top: -10px;
+      border-radius: 5px;
+      border-color: #f1f1f1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="maincontent">
+    <div>
+      <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
+    </div>
+    <br />
+
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Manage card')"> <img src="png/card.png" class="icon">Manage
+        card</button>
+    </div>
+
+    <br />
+
+
+    <div class="display-row">
+      <span style="font-size: large;"> Card</span>
+      <div class="content">
+        <span style="font-size: large; padding: 10px;"> XY Bank MasterCard Debit Card 3123 4567 8912 3456</span>
+      </div>
+    </div>
+
+
+    <div class="display-row">
+      <label class="display-word" for="type"> Card Limit </label>
+      <select class="display-box" style="width: 205px;">
+        <option value="  " selected></option>
+        <option value="100.00">100.00</option>
+        <option value="500.00">500.00</option>
+        <option value="1000.00">1000.00</option>
+        <option value="2000.00">2000.00</option>
+        <option value="3000.00">3000.00</option>
+        <option value="4000.00">4000.00</option>
+        <option value="5000.00">5000.00</option>
+        <option value="8000.00">8000.00</option>
+        <option value="10000.00">10000.00</option>
+
+
+      </select>
+    </div>
+
+    <div style="display: flex; padding-left: 800px; padding-bottom: 50px;" class="display-row">
+      <button style="height: 50px; width: 200px; font-size: large; border-radius: 5px;" onclick="myFunction()">Set
+        Limit</button>
+    </div>
+    <script>
+      function myFunction() {
+        var url = "homepage.html";
+        window.location.href = url;
+        alert("Card limit has been set successfully!");
+      }
+    </script>
+  </div>
+</body>
+
+</html>
