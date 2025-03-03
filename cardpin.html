@@ -10,96 +10,55 @@ Date/Time Last modified:
 
 
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Reset Card Pin </title>
-  <link rel="icon" type="image/png" href="/png/bank.png">
+  <title> Reset Card PIN </title>
+  <link rel="icon" type="image/png" href="png/bank.png">
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
   <script src="/bootstrap/js/bootstrap.js"></script>
-  <style>
-    body {
-      margin: 0px 50px 0px 50px;
-      background-color: rgb(216, 207, 196);
-      max-width: 100%;
-
-    }
-
-    .maincontent {
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .tab {
-      overflow: hidden;
-      border: 0px;
-      background-color: #f1f1f1;
-    }
-
-    .tab button {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 20px 10px;
-      transition: 0.3s;
-      font-size: 17px;
-      margin: 0px 0px 0px 65px;
-    }
-
-
-    .tabcontent {
-      display: none;
-      padding: 6px 12px;
-      border: 1px solid #ccc;
-      border-top: none;
-    }
-
-    .icon {
-      width: 30px;
-      height: 30px;
-      display: block;
-    }
-
-    /*start for ALL type, mobile number, NRIC*/
-    .display-row {
-      display: flex;
-      padding-top: 30px;
-    }
-
-    .display-word {
-      font-size: large;
-
-    }
-
-    .display-box {
-      height: 30px;
-      width: 343px;
-      margin-left: auto;
-      margin-top: -10px;
-      border-radius: 5px;
-      border-color: #f1f1f1;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="maincontent">
-
-    <div>
-      <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
+  <div class="container">
+    <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
+    <div class="profile">
+      <img src="png/human.png" class="icon"> Profile
+      <img src="png/logout.png" class="icon"> Log Out
     </div>
-    <br />
+    <!-- navbar  -->
+    <div class="navbar">
+      <a href="/home.html"><img src="png/history.png" class="icon">History</a>
+      <!-- transfer dropdown  -->
+      <div class="dropdown">
+        <img src="png/transfer.png" class="icon">
+        <button class="dropbtn">Transfer</button>
+        <div class="dropdown-content">
+          <a href="local.html">Local Transfer</a>
+          <a href="overseas.html">Overseas Transfer</a>
+        </div>
+      </div>
 
 
-    <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'Manage card')"> <img src="png/card.png" class="icon">Manage
-        card</button>
+      <!-- manage card dropdown  -->
+      <div class="active">
+        <div class="dropdown">
+          <img src="png/card.png" class="icon">
+          <button class="dropbtn">Manage Card</button>
+          <div class="dropdown-content">
+            <a href="freeze.html">Freeze Card</a>
+            <a href="replace.html">Replace Card</a>
+            <a href="cardpin.html">Reset Card PIN</a>
+            <a href="setlimit.html">Set Limit</a>
+          </div>
+        </div>
+      </div>
+      <a href="/investment.html"><img src="png/investment.png" class="icon">Investment</a>
+      <a href="/insurance.html"><img src="png/insurance.png" class="icon">Insurance</a>
+      <a href="/loan.html"><img src="png/loan.png" class="icon">Loan</a>
     </div>
-
-    <br />
+    <!-- end of navbar  -->
 
     <div class="display-row">
       <label class="display-word" for="nric"> Recipient's NRIC / FIN: </label>

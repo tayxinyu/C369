@@ -1,68 +1,118 @@
-<!--tab for Insurance-->
-<div id="Insurance" class="tabcontent">
-  <br />
-  <br />
-  <div>
-    <p> Health Insurance </p>
-    <img src="png/health.jpg" class="insurance">
-    <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-    </p>
-  </div>
+<!DOCTYPE html>
 
-  <div class="insurance-box2">
-    <p> Disability Insurance</p>
-    <img src="png/disability.jpg" class="insurance">
-    <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply
-        Now </button>
-    </p>
-  </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Investment </title>
+  <link rel="icon" type="image/png" href="png/bank.png">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/bootstrap/js/bootstrap.js"></script>
+</head>
 
-  <div class="insurance-box3">
-    <p> Accident Insurance </p>
-    <img src="png/accident.jpg" class="insurance">
-    <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-    </p>
-  </div>
-
-  <div class="insurance-box4">
-    <p> Long-Term Care Insurance</p>
-    <img src="png/long-term.jpg" class="insurance">
-    <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-    </p>
-  </div>
+<body>
+  <div class="container">
+    <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
+    <div class="profile">
+      <img src="png/human.png" class="icon"> Profile
+      <img src="png/logout.png" class="icon"> Log Out
+    </div>
+    <!-- navbar  -->
+    <div class="navbar">
+      <a href="/home.html"><img src="png/history.png" class="icon">History</a>
+      <!-- transfer dropdown  -->
+      <div class="dropdown">
+        <img src="png/transfer.png" class="icon">
+        <button class="dropbtn">Transfer</button>
+        <div class="dropdown-content">
+          <a href="local.html">Local Transfer</a>
+          <a href="overseas.html">Overseas Transfer</a>
+        </div>
+      </div>
 
 
-  <br />
-  <br />
-  <br />
+      <!-- manage card dropdown  -->
+      <div class="dropdown">
+        <img src="png/card.png" class="icon">
+        <button class="dropbtn">Manage Card</button>
+        <div class="dropdown-content">
+          <a href="freeze.html">Freeze Card</a>
+          <a href="replace.html">Replace Card</a>
+          <a href="cardpin.html">Reset Card PIN</a>
+          <a href="setlimit.html">Set Limit</a>
+        </div>
+      </div>
 
-  <div>
-    <p>Dental Insurance</p>
-    <img src="png/dental.jpg" class="insurance">
-    <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-    </p>
-  </div>
+      <a href="/investment.html"><img src="png/investment.png" class="icon">Investment</a>
+      <a class="active" href="/insurance.html"><img src="png/insurance.png" class="icon">Insurance</a>
+      <a href="/loan.html"><img src="png/loan.png" class="icon">Loan</a>
+    </div>
+    <!-- end of navbar  -->
 
-  <div class="insurance-box6">
-    <p>Income Insurance</p>
-    <img src="png/income.jpg" class="insurance">
-    <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-    </p>
-  </div>
+    <!--tab for Insurance-->
+    <div id="Insurance" class="tabcontent">
+      <br />
+      <br />
+      <div>
+        <p> Health Insurance </p>
+        <img src="png/health.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
 
-  <div class="insurance-box7">
-    <p>Cancer Insurance</p>
-    <img src="png/cancer.jpg" class="insurance">
-    <p class="insurance-button"> <button class="insurance-button-radius" onclick="myFunction()">Apply Now
-      </button>
-    </p>
-  </div>
+      <div class="insurance-box2">
+        <p> Disability Insurance</p>
+        <img src="png/disability.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply
+            Now </button>
+        </p>
+      </div>
 
-  <div class="insurance-box8">
-    <p>Accident Death Insurance</p>
-    <img src="png/death.jpg" class="insurance">
-    <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
-    </p>
-  </div>
+      <div class="insurance-box3">
+        <p> Accident Insurance </p>
+        <img src="png/accident.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
 
-</div>
+      <div class="insurance-box4">
+        <p> Long-Term Care Insurance</p>
+        <img src="png/long-term.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+
+      <br />
+      <br />
+      <br />
+
+      <div>
+        <p>Dental Insurance</p>
+        <img src="png/dental.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+      <div class="insurance-box6">
+        <p>Income Insurance</p>
+        <img src="png/income.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+      <div class="insurance-box7">
+        <p>Cancer Insurance</p>
+        <img src="png/cancer.jpg" class="insurance">
+        <p class="insurance-button"> <button class="insurance-button-radius" onclick="myFunction()">Apply Now
+          </button>
+        </p>
+      </div>
+
+      <div class="insurance-box8">
+        <p>Accident Death Insurance</p>
+        <img src="png/death.jpg" class="insurance">
+        <p class="insurance-button"><button class="insurance-button-radius" onclick="myFunction()">Apply Now </button>
+        </p>
+      </div>
+
+    </div>

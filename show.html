@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Card on Click</title>
+  <style>
+    .card {
+      display: none;
+      width: 400px;
+      height: 220px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 15px;
+      border: 1px solid black;
+      position: relative;
+      align-items: flex-start;
+    }
+
+    .logo {
+      width: 180px;
+      height: 50px;
+    }
+
+    .chip {
+      width: 50px;
+      height: 50px;
+      margin-top: 20px;
+    }
+
+    .number {
+      margin-top: 5px;
+      font-size: 30px;
+      font-family: 'OCR-B', 'Courier New', monospace;
+    }
+
+    .date {
+      align-items: center;
+      margin-top: -30px;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -30px;
+    }
+
+    .name {
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .mastercard {
+      width: 100px;
+      height: 100px;
+      margin-top: -30px;
+      margin-right: -20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button class="btn" onclick="showCard()">Show Card</button>
+
+  <div id="card" class="card">
+    <img src="png/logo.png" class="logo">
+    </br>
+    <img src="png/chip.png" class="chip">
+    <p class="number">3123 4567 8912 3456</p>
+    <div class="date">
+      <p style="font-size: 10px;">VALID THRU</p>
+      <p style="margin-top: -10px;">11/25 </p>
+    </div>
+    <div class="details">
+      <p class="name">Lia Liu</p>
+      <img src="png/mastercard.png" class="mastercard">
+    </div>
+
+  </div>
+
+  <script>
+    function showCard() {
+      document.getElementById("card").style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>

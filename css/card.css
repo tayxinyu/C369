@@ -1,0 +1,52 @@
+.card {
+  display: none;
+  width: 400px;
+  height: 250px;
+  margin-top: 10px;;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid black;
+  position: relative;
+  align-items: flex-start;
+}
+
+.logo {
+  margin-top:-10px;
+  width: 180px;
+  height: 50px;
+}
+
+.chip {
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.number {
+  margin-top: 5px;
+  font-size: 30px;
+  font-family: 'OCR-B', 'Courier New', monospace;
+}
+
+.date {
+  align-items: center;
+  margin-top: -20px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.name {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mastercard {
+  width: 100px;
+  height: 100px;
+  margin-top: -40px;
+  margin-right: -20px;
+}
