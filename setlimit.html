@@ -21,11 +21,19 @@ Date/Time Last modified: 14 August 2023 14:00
 </head>
 
 <body>
-  <div class="container">
-    <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
-    <div class="profile">
-      <img src="png/human.png" class="icon"> Profile
-      <img src="png/logout.png" class="icon"> Log Out
+  <!-- <div class="container"> -->
+    <div class="menu">
+      <a href="index.html">
+        <img src="png/bank.png" class="icon"> XY Bank
+      </a>
+      <div>
+        <a href="logout.html" class="split">
+          <img src="png/logout.png" class="icon"> Log Out
+        </a>
+        <a href="profile.html" class="split">
+          <img src="png/human.png" class="icon"> Profile
+        </a>
+      </div>
     </div>
     <!-- navbar  -->
     <div class="navbar">
@@ -39,8 +47,6 @@ Date/Time Last modified: 14 August 2023 14:00
           <a href="overseas.html">Overseas Transfer</a>
         </div>
       </div>
-
-
       <!-- manage card dropdown  -->
       <div class="active">
         <div class="dropdown">
@@ -87,7 +93,7 @@ Date/Time Last modified: 14 August 2023 14:00
     </div>
 
     <div style="display: flex; padding-left: 800px; padding-bottom: 50px;" class="display-row">
-      <button style="height: 50px; width: 200px; font-size: large; border-radius: 5px;" onclick="myFunction()">Set
+      <button class="button" onclick="myFunction()">Set
         Limit</button>
     </div>
     <script>

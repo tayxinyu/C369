@@ -21,83 +21,88 @@ Date/Time Last modified:
 </head>
 
 <body>
-  <div class="container">
-    <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
-    <div class="profile">
-      <img src="png/human.png" class="icon"> Profile
-      <img src="png/logout.png" class="icon"> Log Out
+  <!-- <div class="container"> -->
+  <div class="menu">
+    <a href="index.html">
+      <img src="png/bank.png" class="icon"> XY Bank
+    </a>
+    <div>
+      <a href="logout.html" class="split">
+        <img src="png/logout.png" class="icon"> Log Out
+      </a>
+      <a href="profile.html" class="split">
+        <img src="png/human.png" class="icon"> Profile
+      </a>
     </div>
-    <!-- navbar  -->
-    <div class="navbar">
-      <a href="/home.html"><img src="png/history.png" class="icon">History</a>
-      <!-- transfer dropdown  -->
+  </div>
+  <!-- navbar  -->
+  <div class="navbar">
+    <a href="/home.html"><img src="png/history.png" class="icon">History</a>
+    <!-- transfer dropdown  -->
+    <div class="dropdown">
+      <img src="png/transfer.png" class="icon">
+      <button class="dropbtn">Transfer</button>
+      <div class="dropdown-content">
+        <a href="local.html">Local Transfer</a>
+        <a href="overseas.html">Overseas Transfer</a>
+      </div>
+    </div>
+    <!-- manage card dropdown  -->
+    <div class="active">
       <div class="dropdown">
-        <img src="png/transfer.png" class="icon">
-        <button class="dropbtn">Transfer</button>
+        <img src="png/card.png" class="icon">
+        <button class="dropbtn">Manage Card</button>
         <div class="dropdown-content">
-          <a href="local.html">Local Transfer</a>
-          <a href="overseas.html">Overseas Transfer</a>
+          <a href="freeze.html">Freeze Card</a>
+          <a href="replace.html">Replace Card</a>
+          <a href="cardpin.html">Reset Card PIN</a>
+          <a href="setlimit.html">Set Limit</a>
         </div>
       </div>
-
-
-      <!-- manage card dropdown  -->
-      <div class="active">
-        <div class="dropdown">
-          <img src="png/card.png" class="icon">
-          <button class="dropbtn">Manage Card</button>
-          <div class="dropdown-content">
-            <a href="freeze.html">Freeze Card</a>
-            <a href="replace.html">Replace Card</a>
-            <a href="cardpin.html">Reset Card PIN</a>
-            <a href="setlimit.html">Set Limit</a>
-          </div>
-        </div>
-      </div>
-      <a href="/investment.html"><img src="png/investment.png" class="icon">Investment</a>
-      <a href="/insurance.html"><img src="png/insurance.png" class="icon">Insurance</a>
-      <a href="/loan.html"><img src="png/loan.png" class="icon">Loan</a>
     </div>
-    <!-- end of navbar  -->
+    <a href="/investment.html"><img src="png/investment.png" class="icon">Investment</a>
+    <a href="/insurance.html"><img src="png/insurance.png" class="icon">Insurance</a>
+    <a href="/loan.html"><img src="png/loan.png" class="icon">Loan</a>
+  </div>
+  <!-- end of navbar  -->
 
-    <div class="display-row">
-      <label class="display-word" for="nric"> Recipient's NRIC / FIN: </label>
-      <input class="display-box" type="text" id="nric" name="nric">
-    </div>
+  <div class="display-row">
+    <label class="display-word" for="nric"> Recipient's NRIC / FIN: </label>
+    <input class="display-box" type="text" id="nric" name="nric">
+  </div>
 
-    <div class="display-row">
+  <div class="display-row">
 
-      <label class="display-word" for="card"> Select Card</label>
-      <select class="display-box" style="width: 350px;">
-        <option value="" selected></option>
-        <option value="card">XY Bank MasterCard Debit Card 3123 4567 8912 3456</option>
-      </select>
-    </div>
-
-
-    <div class="display-row">
-      <label class="display-word" for="nric"> New Pin </label>
-      <input class="display-box" type="text" id="pin" name="pin">
-    </div>
-
-    <div class="display-row">
-      <label class="display-word" for="nric"> Confirm Pin </label>
-      <input class="display-box" type="text" id="pin" name="pin">
-    </div>
+    <label class="display-word" for="card"> Select Card</label>
+    <select class="display-box" style="width: 350px;">
+      <option value="" selected></option>
+      <option value="card">XY Bank MasterCard Debit Card 3123 4567 8912 3456</option>
+    </select>
+  </div>
 
 
-    <div style="display: flex; padding-left: 800px; padding-bottom: 50px;" class="display-row">
-      <button style="height: 50px; width: 200px; font-size: large; border-radius: 5px;"
-        onclick="myFunction()">Change</button>
+  <div class="display-row">
+    <label class="display-word" for="nric"> New Pin </label>
+    <input class="display-box" type="text" id="pin" name="pin">
+  </div>
 
-      <script>
-        function myFunction() {
-          var url = "homepage.html";
-          window.location.href = url;
-          alert("Card PIN Changed!\n Your card PIN has been changed successfully!");
-        }
-      </script>
-    </div>
+  <div class="display-row">
+    <label class="display-word" for="nric"> Confirm Pin </label>
+    <input class="display-box" type="text" id="pin" name="pin">
+  </div>
+
+
+  <div style="display: flex; padding-left: 800px; padding-bottom: 50px;" class="display-row">
+    <button class="button" onclick="myFunction()">Change</button>
+
+    <script>
+      function myFunction() {
+        var url = "homepage.html";
+        window.location.href = url;
+        alert("Card PIN Changed!\n Your card PIN has been changed successfully!");
+      }
+    </script>
+  </div>
 
 </body>
 

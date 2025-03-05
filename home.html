@@ -19,104 +19,92 @@ Date/Time Last modified: 14 August 2023 14:00
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/card.css">
-  <script src="bootstrap/js/bootstrap.js"></script>
+  <script src="/bootstrap/js/bootstrap.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <img src="png/bank.png" style="width:50px;height:50px"> XY Bank
-    <div class="profile">
-      <img src="png/human.png" class="icon"> Profile
-      <img src="png/logout.png" class="icon"> Log Out
-    </div>
-    <!-- navbar  -->
-    <div class="navbar">
-      <a class="active" href="/home.html"><img src="png/history.png" class="icon">History</a>
-      <!-- transfer dropdown  -->
-      <div class="dropdown">
-        <img src="png/transfer.png" class="icon">
-        <button class="dropbtn">Transfer</button>
-        <div class="dropdown-content">
-          <a href="local.html">Local Transfer</a>
-          <a href="overseas.html">Overseas Transfer</a>
-        </div>
-      </div>
-
-
-      <!-- manage card dropdown  -->
-      <div class="dropdown">
-        <img src="png/card.png" class="icon">
-        <button class="dropbtn">Manage Card</button>
-        <div class="dropdown-content">
-          <a href="freeze.html">Freeze Card</a>
-          <a href="replace.html">Replace Card</a>
-          <a href="cardpin.html">Reset Card PIN</a>
-          <a href="setlimit.html">Set Limit</a>
-        </div>
-      </div>
-      <a href="/grow.html"><img src="png/investment.png" class="icon">Investment</a>
-      <a href="/insurance.html"><img src="png/insurance.png" class="icon">Insurance</a>
-      <a href="/loan.html"><img src="png/loan.png" class="icon">Loan</a>
-    </div>
-    <!-- end of navbar  -->
-
-
-
-    <!-- history content -->
-    <strong style="font-size: 30px;">Current Balance: $100.00 </strong>
-    <br>
-
-
-    <!-- card-->
+  <!-- <div class="container"> -->
+  <div class="menu">
+    <a href="index.html">
+      <img src="png/bank.png" class="icon"> XY Bank
+    </a>
     <div>
-      <button class="rounded-button" onclick="showCard()">View Card</button>
-
-      <div id="card" class="card">
-        <img src="png/logo.png" class="logo">
-        </br>
-        <img src="png/chip.png" class="chip">
-        <p class="number">3123 4567 8912 3456</p>
-        <div class="date">
-          <p style="font-size: 10px;">VALID THRU</p>
-          <p style="margin-top: -20px;">11/25 </p>
-        </div>
-        <div class="details">
-          <p class="name">Lia Liu</p>
-          <img src="png/mastercard.png" class="mastercard">
-        </div>
-      </div>
-
-      <div>
-        <p style="font-size: 20px; padding: 10px;">Transfer to Alice
-          <span style="color: red; margin-left: 850px; display: block; margin-top: -30px;">
-            -$15.00
-          </span>
-        </p>
-      </div>
-      <script>
-        function openTab(evt, bankTab) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(bankTab).style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-
-        window.onload = function () {
-          alert("DON'T share your personal details, OTP as these may lead to fraud !");
-        };
-
-        function showCard() {
-          document.getElementById("card").style.display = "block";
-        }
-
-      </script>
+      <a href="logout.html" class="split">
+        <img src="png/logout.png" class="icon"> Log Out
+      </a>
+      <a href="profile.html" class="split">
+        <img src="png/human.png" class="icon"> Profile
+      </a>
     </div>
+  </div>
+  <!-- navbar  -->
+  <div class="navbar">
+    <a class="active" href="/home.html"><img src="png/history.png" class="icon">History</a>
+    <!-- transfer dropdown  -->
+    <div class="dropdown">
+      <img src="png/transfer.png" class="icon">
+      <button class="dropbtn">Transfer</button>
+      <div class="dropdown-content">
+        <a href="local.html">Local Transfer</a>
+        <a href="overseas.html">Overseas Transfer</a>
+      </div>
+    </div>
+    <!-- manage card dropdown  -->
+    <div class="dropdown">
+      <img src="png/card.png" class="icon">
+      <button class="dropbtn">Manage Card</button>
+      <div class="dropdown-content">
+        <a href="freeze.html">Freeze Card</a>
+        <a href="replace.html">Replace Card</a>
+        <a href="cardpin.html">Reset Card PIN</a>
+        <a href="setlimit.html">Set Limit</a>
+      </div>
+    </div>
+    <a href="/investment.html"><img src="png/investment.png" class="icon">Investment</a>
+    <a href="/insurance.html"><img src="png/insurance.png" class="icon">Insurance</a>
+    <a href="/loan.html"><img src="png/loan.png" class="icon">Loan</a>
+  </div>
+  <!-- end of navbar  -->
+
+  <!-- history content -->
+  <strong style="font-size: 30px;">Current Balance: $100.00 </strong>
+  <br>
+  <!-- card-->
+  <button class="button" onclick="toggleCard()">View Card</button>
+  <div id="card" class="card">
+    <img src="png/logo.png" class="logo">
+    </br>
+    <img src="png/chip.png" class="chip">
+    <p class="number">3123 4567 8912 3456</p>
+    <div class="date">
+      <p style="font-size: 10px;">VALID THRU</p>
+      <p style="margin-top: -20px;">11/25 </p>
+    </div>
+    <div class="details">
+      <p class="name">Lia Liu</p>
+      <img src="png/mastercard.png" class="mastercard">
+    </div>
+  </div>
+  </br>
+  <div>
+    <b>Date: 1 Jan</b>
+    <p style="font-size: 20px; padding: 10px;">Transfer to Alice
+      <span style="color: red; margin-left: 850px; display: block; margin-top: -30px;">
+        -$15.00
+      </span>
+    </p>
+  </div>
+  <script>
+    // window.onload = function () {
+    //   alert("DON'T share your personal details, OTP as these may lead to fraud !");
+    // };
+
+    function toggleCard() {
+      document.getElementById("card").classList.toggle("show");
+    }
+
+  </script>
+  </div>
 </body>
+
 </html>

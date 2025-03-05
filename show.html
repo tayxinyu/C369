@@ -4,88 +4,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Show Card on Click</title>
+  <title>Scrollable Navbar</title>
   <style>
-    .card {
-      display: none;
-      width: 400px;
-      height: 220px;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 15px;
-      border: 1px solid black;
-      position: relative;
-      align-items: flex-start;
-    }
-
-    .logo {
-      width: 180px;
-      height: 50px;
-    }
-
-    .chip {
-      width: 50px;
-      height: 50px;
-      margin-top: 20px;
-    }
-
-    .number {
-      margin-top: 5px;
-      font-size: 30px;
-      font-family: 'OCR-B', 'Courier New', monospace;
-    }
-
-    .date {
-      align-items: center;
-      margin-top: -30px;
-    }
-
-    .details {
+    /* .navbar-container {
       display: flex;
-      justify-content: space-between;
-      margin-top: -30px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+      position: relative;
+    } */
+
+    .navbar::-webkit-scrollbar {
+      display: none;
     }
 
-    .name {
-      font-size: 20px;
-      font-family: 'Roboto', sans-serif;
+    .navbar {
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
     }
 
-    .mastercard {
-      width: 100px;
-      height: 100px;
-      margin-top: -30px;
-      margin-right: -20px;
+    .navbar a {
+      padding: 12px 16px;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .navbar a:hover {
+      background: #555;
+    }
+
+    .active {
+      background-color: aliceblue;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+    /* dropdown menu  */
+    .dropbtn {
+      padding: 20px;
+      border: none;
+      background-color: transparent;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+
+    .rounded-button {
+      padding: 10px;
+      border-radius: 15px;
+      border: 2px solid black;
+      background-color: transparent;
     }
   </style>
 </head>
 
 <body>
+      <nav class="navbar">
+        <a class="active" href="/home.html"><img src="png/history.png" class="icon">History</a>
+        <!-- transfer dropdown  -->
+        <div class="dropdown">
+          <img src="png/transfer.png" class="icon">
+          <button class="dropbtn">Transfer</button>
+          <div class="dropdown-content">
+            <a href="local.html">Local Transfer</a>
+            <a href="overseas.html">Overseas Transfer</a>
+          </div>
+        </div>
 
-  <button class="btn" onclick="showCard()">Show Card</button>
 
-  <div id="card" class="card">
-    <img src="png/logo.png" class="logo">
-    </br>
-    <img src="png/chip.png" class="chip">
-    <p class="number">3123 4567 8912 3456</p>
-    <div class="date">
-      <p style="font-size: 10px;">VALID THRU</p>
-      <p style="margin-top: -10px;">11/25 </p>
-    </div>
-    <div class="details">
-      <p class="name">Lia Liu</p>
-      <img src="png/mastercard.png" class="mastercard">
-    </div>
-
+        <!-- manage card dropdown  -->
+        <div class="dropdown">
+          <img src="png/card.png" class="icon">
+          <button class="dropbtn">Manage Card</button>
+          <div class="dropdown-content">
+            <a href="freeze.html">Freeze Card</a>
+            <a href="replace.html">Replace Card</a>
+            <a href="cardpin.html">Reset Card PIN</a>
+            <a href="setlimit.html">Set Limit</a>
+          </div>
+        </div>
+        <a href="/investment.html"><img src="png/investment.png" class="icon">Investment</a>
+        <a href="/insurance.html"><img src="png/insurance.png" class="icon">Insurance</a>
+        <a href="/loan.html"><img src="png/loan.png" class="icon">Loan</a>
+    </nav>
   </div>
-
-  <script>
-    function showCard() {
-      document.getElementById("card").style.display = "block";
-    }
-  </script>
-
+  </div>
 </body>
 
 </html>
